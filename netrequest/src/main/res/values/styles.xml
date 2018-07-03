@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="dialog_custom" parent="android:style/Theme.Dialog">
+        <!-- 窗口背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否去掉标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 屏幕背景是否暗淡 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景暗淡程度 -->
+        <item name="android:backgroundDimAmount">0.3</item>
+        <!-- 窗口外触摸时是否关闭窗口 -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="wrap_center_h">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+</resources>

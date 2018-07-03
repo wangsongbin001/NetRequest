@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="bottomMenu"
+            type="com.innotech.mydemo.bean.BottomMenuBean"/>
+
+         <variable
+             name="mainmenuVM"
+             type="com.innotech.mydemo.viewmodel.MainMenuVM"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="项目"
+                android:gravity="center"
+                android:textColor="@{bottomMenu.index == 0 ? @android:color/black : @android:color/darker_gray}"
+                android:onClick="@{()->mainmenuVM.switchMenu(bottomMenu, 0)}"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="项目"
+                android:gravity="center"
+                android:textColor="@{bottomMenu.index == 1 ? @android:color/black : @android:color/darker_gray}"
+                android:onClick="@{()->mainmenuVM.switchMenu(bottomMenu, 1)}"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="项目"
+                android:gravity="center"
+                android:textColor="@{bottomMenu.index == 2 ? @android:color/black : @android:color/darker_gray}"
+                android:onClick="@{()->mainmenuVM.switchMenu(bottomMenu, 2)}"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="项目"
+                android:gravity="center"
+                android:textColor="@{bottomMenu.index == 3 ? @android:color/black : @android:color/darker_gray}"
+                android:onClick="@{()->mainmenuVM.switchMenu(bottomMenu, 3)}"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

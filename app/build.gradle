@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.innotech.mydemo"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // 声明需要使用注解功能
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+
+    signingConfigs{
+        release{
+            keyAlias "demokey"
+            keyPassword "innotech"
+            storeFile file("../config/android.jks")
+            storePassword "innotech"
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def buildType = variant.buildType.name
+            if (!buildType.equals('debug')) {
+                //这里修改文件名
+                def fileName = "MyDemo.apk"
+                if (buildType.equals('release')) {
+                    fileName = "MyDemo_release_v${android.defaultConfig.versionName}_${android.defaultConfig.versionCode}.apk"
+                }
+                output.outputFileName = fileName
+            }
+        }
+    }
+
+    File file = new File("../config/signing.properties")
+    if(file.exists()){
+        java.util.Properties props = new Properties()
+        props.load(new FileInputStream(file))
+        if(props.containsKey('keyAlias')
+                && props.containsKey('keyPassword')
+                &&props.containsKey('storeFile')
+                &&props.containsKey('storePassword'))
+        android.signingConfigs.release.storeFile = file(props['storeFile'])
+        android.signingConfigs.release.storePassword = props['storePassword']
+        android.signingConfigs.release.keyAlias = props['keyAlias']
+        android.signingConfigs.release.keyPassword = props['keyPassword']
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug{
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding{
+        enabled = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //    compile(name:'netrequest',ext:'aar')
+    implementation project(':netrequest')
+//    implementation 'io.reactivex.rxjava2:rxjava:2.1.10'
+//    implementation 'com.google.code.gson:gson:2.8.0'
+    compileOnly 'org.projectlombok:lombok:1.12.6'
+    implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NetRequest</string>
+    <string name="waiting">请稍等...</string>
+</resources>
