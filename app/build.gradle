@@ -86,4 +86,8 @@ dependencies {
 //    implementation 'com.google.code.gson:gson:2.8.0'
     compileOnly 'org.projectlombok:lombok:1.12.6'
     implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
+    //butterknife
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //权限申请
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
 }

@@ -1,4 +1,4 @@
-package com.innotech.mydemo.adapter;
+package com.innotech.mydemo.main.adapter;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;

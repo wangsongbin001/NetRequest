@@ -8,4 +8,42 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- 启动页 theme. windowBackground设置为启动页背景图实现无缝打开启动页 -->
+    <style name="launchTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <!--<item name="android:windowBackground">@drawable/start_loading</item>-->
+    </style>
+
+    <style name="introduceTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <!--<item name="android:windowBackground">@drawable/start_loading</item>-->
+    </style>
+
+    <style name="button_171_40_red">
+        <item name="android:layout_width">171dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/selector_button_corner4_red</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/bg_white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--大型白色按钮,171*40-->
+    <style name="button_171_40_white" parent="button_171_40_red">
+        <item name="android:background">@drawable/selector_button_corner4_white</item>
+        <item name="android:textColor">@drawable/selector_button_text_red_gray</item>
+    </style>
+
+    <!--中型白色按钮,120*40-->
+    <style name="button_120_40_white" parent="button_171_40_white">
+        <item name="android:layout_width">120dp</item>
+    </style>
+
+    <!--中型红色按钮,120*40-->
+    <style name="button_120_40_red" parent="button_171_40_red">
+        <item name="android:layout_width">120dp</item>
+    </style>
 </resources>

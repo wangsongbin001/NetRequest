@@ -15,4 +15,10 @@ public class LogUtil {
             Log.d(tag, msg);
         }
     }
+
+    public static void i(String tag, String msg){
+        if(isDebug){
+            Log.i(tag, msg);
+        }
+    }
 }

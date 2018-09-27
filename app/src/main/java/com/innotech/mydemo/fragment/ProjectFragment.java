@@ -9,11 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.innotech.mydemo.R;
-import com.innotech.mydemo.adapter.ProjectAdapter;
+import com.innotech.mydemo.main.adapter.ProjectAdapter;
 import com.innotech.mydemo.databinding.FragmentProjectBinding;
 import com.innotech.mydemo.viewmodel.ProjectVM;
 import com.innotech.netrequest.BaseFragmentV4;
-import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
 /**
  * Created by admin on 2018/4/18.

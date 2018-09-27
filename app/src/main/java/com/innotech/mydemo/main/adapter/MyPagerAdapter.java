@@ -1,4 +1,4 @@
-package com.innotech.mydemo.adapter;
+package com.innotech.mydemo.main.adapter;
 
 
 import android.support.v4.app.Fragment;

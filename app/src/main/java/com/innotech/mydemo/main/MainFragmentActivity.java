@@ -1,4 +1,4 @@
-package com.innotech.mydemo;
+package com.innotech.mydemo.main;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.google.gson.Gson;
+import com.innotech.mydemo.R;
 import com.innotech.mydemo.bean.ResVersionBean;
 import com.innotech.netrequest.entities.ResponseBean;
 import com.innotech.mydemo.bean.TokenBean;

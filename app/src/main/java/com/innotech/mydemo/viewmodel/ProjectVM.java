@@ -2,11 +2,10 @@ package com.innotech.mydemo.viewmodel;
 
 import android.widget.Toast;
 
-import com.innotech.mydemo.adapter.ProjectAdapter;
+import com.innotech.mydemo.main.adapter.ProjectAdapter;
 import com.innotech.mydemo.bean.ProjectItemBean;
 import com.innotech.mydemo.model.IProjectModel;
 import com.innotech.mydemo.model.imp.ProjectModelImp;
-import com.innotech.netrequest.BaseAppCompatActivity;
 import com.innotech.netrequest.BaseFragmentV4;
 import com.innotech.netrequest.util.LogUtil;
 
