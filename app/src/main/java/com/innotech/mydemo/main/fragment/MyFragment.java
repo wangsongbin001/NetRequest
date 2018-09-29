@@ -1,4 +1,4 @@
-package com.innotech.mydemo.fragment;
+package com.innotech.mydemo.main.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

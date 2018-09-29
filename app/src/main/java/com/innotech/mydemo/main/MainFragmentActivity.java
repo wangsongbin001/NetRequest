@@ -1,7 +1,6 @@
 package com.innotech.mydemo.main;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -14,20 +13,16 @@ import com.innotech.mydemo.bean.ResVersionBean;
 import com.innotech.netrequest.entities.ResponseBean;
 import com.innotech.mydemo.bean.TokenBean;
 import com.innotech.mydemo.bean.TotalBean;
-import com.innotech.mydemo.model.net.ApiWrapper;
-import com.innotech.mydemo.model.net.CuriserWrapper;
+import com.innotech.mydemo.main.model.net.ApiWrapper;
+import com.innotech.mydemo.main.model.net.CuriserWrapper;
 import com.innotech.netrequest.BaseActivity;
-import com.innotech.netrequest.net.ApiException;
 import com.innotech.netrequest.net.BaseErrorConsumer;
 import com.innotech.netrequest.net.LoadingFlowableTransformer;
 import com.innotech.netrequest.net.LoadingTransformer;
 
-import org.reactivestreams.Publisher;
-
 import java.util.HashMap;
 import java.util.Map;
 
-import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.functions.Consumer;

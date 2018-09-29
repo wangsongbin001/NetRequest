@@ -16,6 +16,10 @@ android {
 
         // 声明需要使用注解功能
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        //申明BuildConfigFiled
+        def filesAuthorityValue = applicationId + ".files"
+        manifestPlaceholders = [filesAuthority: filesAuthorityValue]
+        buildConfigField "String", "FILES_AUTHORITY", "\"${filesAuthorityValue}\""
     }
 
     signingConfigs{

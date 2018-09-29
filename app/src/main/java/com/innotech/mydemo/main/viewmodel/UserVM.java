@@ -1,15 +1,14 @@
-package com.innotech.mydemo.viewmodel;
+package com.innotech.mydemo.main.viewmodel;
 
 import android.content.Intent;
-import android.view.View;
 import android.widget.Toast;
 
 import com.innotech.mydemo.MApp;
 import com.innotech.mydemo.activity.MainMenuActivity;
 import com.innotech.mydemo.bean.TokenBean;
 import com.innotech.mydemo.bean.UserBean;
-import com.innotech.mydemo.model.IUserModel;
-import com.innotech.mydemo.model.imp.UserModelImp;
+import com.innotech.mydemo.main.model.IUserModel;
+import com.innotech.mydemo.main.model.imp.UserModelImp;
 import com.innotech.netrequest.BaseActivity;
 
 /**

@@ -1,12 +1,9 @@
 package com.innotech.mydemo.activity;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 
-import com.innotech.mydemo.R;
 import com.innotech.mydemo.bean.UserBean;
-import com.innotech.mydemo.databinding.ActivityLoginBinding;
-import com.innotech.mydemo.viewmodel.UserVM;
+import com.innotech.mydemo.main.viewmodel.UserVM;
 import com.innotech.netrequest.BaseActivity;
 
 /**
@@ -19,13 +16,13 @@ public class LoginActivity extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ActivityLoginBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+//        ActivityLoginBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         UserVM loginVM = new UserVM(this);
-        binding.setLoginVM(loginVM);
+//        binding.setLoginVM(loginVM);
 
         UserBean userBean = new UserBean();
         userBean.userName.set("max");
         userBean.password.set("123456");
-        binding.setUserBean(userBean);
+//        binding.setUserBean(userBean);
     }
 }

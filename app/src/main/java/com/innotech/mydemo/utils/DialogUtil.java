@@ -18,12 +18,12 @@ import com.innotech.mydemo.R;
 public class DialogUtil {
 
     public static AlertDialog showDialog(Context context, String title, String message,
-                                         DialogInterface.OnClickListener positiveListener){
+                                         DialogInterface.OnClickListener positiveListener, String positiveText){
         return showDialog(context, title, message,
                 null,
                 positiveListener,
                 null,
-                "下一步",
+                positiveText,
                 null,
                 false,
                 false);

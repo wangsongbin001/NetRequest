@@ -3,6 +3,7 @@ package com.innotech.mydemo.launch;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,10 +12,13 @@ import android.widget.Toast;
 
 import com.innotech.mydemo.R;
 import com.innotech.mydemo.launch.bean.AppVersionBean;
+import com.innotech.mydemo.launch.bean.DownloadBean;
 import com.innotech.mydemo.launch.pressenter.ILanchPressenter;
 import com.innotech.mydemo.launch.pressenter.LaunchPressenterImp;
+import com.innotech.mydemo.launch.util.DownloadUtil;
 import com.innotech.mydemo.utils.CommonUtil;
 import com.innotech.mydemo.utils.DialogUtil;
+import com.innotech.mydemo.utils.ToastUtil;
 import com.innotech.netrequest.net.BaseErrorConsumer;
 import com.innotech.netrequest.util.LogUtil;
 import com.tbruyelle.rxpermissions2.RxPermissions;
@@ -29,11 +33,11 @@ import io.reactivex.functions.Consumer;
  * 1，权限申请
  * 2，版本更新
  *    2.1，版本获取
- *    2.2，新版的apk下载
+ *    2.2，新版的apk下载（进度条没更新） 
  *    2.3，新版apk的安装
  * 3，新手引导
- * 4，配置加载
- * 5，广告展示
+ * 4，广告展示
+ * 5，配置加载
  */
 public class LaunchActivity extends AppCompatActivity{
 
@@ -41,6 +45,9 @@ public class LaunchActivity extends AppCompatActivity{
     Button btnRequest;
 
     ILanchPressenter mILanchPressenter;
+    DownloadProgressDialogManager downloadProgressDialogManager;
+
+    private Handler mHandler = new Handler();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,19 +55,22 @@ public class LaunchActivity extends AppCompatActivity{
         setContentView(R.layout.activity_launch);
         ButterKnife.bind(this);
         mILanchPressenter = new LaunchPressenterImp(this);
+        downloadProgressDialogManager = new DownloadProgressDialogManager(this);
     }
 
     @OnClick({R.id.btn_request})
     public void onClick(View view) {
 //        int versionCode = CommonUtil.getAppVersionCode(this);
 //        String versionName = CommonUtil.getAppVersionName(this);
-
 //        LogUtil.i("wsb", "versionCode:" + versionCode + ";versionName:" + versionName);
-//        mILanchPressenter.appStart();
+
 //        Intent intent = new Intent(this, IntroduceActivity.class);
 //        startActivity(intent);
 
+//        mILanchPressenter.appStart();
 
+        //广告展示
+//        showAds();
     }
 
     /**
@@ -81,7 +91,7 @@ public class LaunchActivity extends AppCompatActivity{
                             dialog.dismiss();
                             requestRermission(rxPermissions);
                         }
-                    });
+                    },"下一步");
         } else {
             mILanchPressenter.appStart();
         }
@@ -110,19 +120,30 @@ public class LaunchActivity extends AppCompatActivity{
     /**
      * 展示版本更新提示框
      */
-    public void showUpdateDialog(AppVersionBean versionBean){
-        DialogUtil.showDialog(this, "最新版本" + versionBean.versionName,
-                versionBean.appIntroduce, new DialogInterface.OnClickListener() {
+    public void showUpdateDialog(final DownloadBean downloadBean){
+        DialogUtil.showDialog(this, "最新版本:" + downloadBean.getVersionName(),
+                downloadBean.getIntroduce(), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        dialog.dismiss();
+//                        ToastUtil.showToastL(LaunchActivity.this, "点击立即更新");
+                        DownloadUtil.startDownload(LaunchActivity.this,
+                                downloadBean.getDownloadUrl(),
+                                downloadBean.getAppFileName(),
+                                downloadBean.getAppSize());
+                        mHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                 downloadProgressDialogManager.startProgressDialog();
+                            }
+                        }, 100);
                     }
-                }, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
+                },"立即更新");
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        downloadProgressDialogManager.onDestroy();
+    }
 }

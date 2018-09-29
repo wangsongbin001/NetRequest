@@ -1,4 +1,4 @@
-package com.innotech.mydemo.fragment;
+package com.innotech.mydemo.main.fragment;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.innotech.mydemo.R;
 import com.innotech.mydemo.main.adapter.ProjectAdapter;
 import com.innotech.mydemo.databinding.FragmentProjectBinding;
-import com.innotech.mydemo.viewmodel.ProjectVM;
+import com.innotech.mydemo.main.viewmodel.ProjectVM;
 import com.innotech.netrequest.BaseFragmentV4;
 
 /**

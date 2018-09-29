@@ -1,11 +1,11 @@
-package com.innotech.mydemo.model.imp;
+package com.innotech.mydemo.main.model.imp;
 
 import com.google.gson.Gson;
 import com.innotech.mydemo.MApp;
 import com.innotech.mydemo.bean.ProjectResultBean;
-import com.innotech.mydemo.model.IProjectModel;
-import com.innotech.mydemo.model.net.CuriserWrapper;
-import com.innotech.mydemo.viewmodel.ProjectVM;
+import com.innotech.mydemo.main.model.IProjectModel;
+import com.innotech.mydemo.main.model.net.CuriserWrapper;
+import com.innotech.mydemo.main.viewmodel.ProjectVM;
 import com.innotech.netrequest.BaseFragmentV4;
 import com.innotech.netrequest.net.ApiException;
 

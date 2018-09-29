@@ -1,6 +1,4 @@
-package com.innotech.mydemo.model;
-
-import android.content.Context;
+package com.innotech.mydemo.main.model;
 
 import com.innotech.mydemo.bean.UserBean;
 import com.innotech.netrequest.BaseActivity;

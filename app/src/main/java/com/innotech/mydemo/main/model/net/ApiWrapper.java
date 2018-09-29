@@ -1,4 +1,4 @@
-package com.innotech.mydemo.model.net;
+package com.innotech.mydemo.main.model.net;
 
 import android.content.Context;
 

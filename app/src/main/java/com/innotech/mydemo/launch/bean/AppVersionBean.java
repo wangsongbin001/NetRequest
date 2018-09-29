@@ -31,6 +31,10 @@ public class AppVersionBean implements Serializable{
     @SerializedName("appIntroduce")
     public String appIntroduce;
 
+    @Expose
+    @SerializedName("appKBsize")
+    public int appKBsize;
+
     @Override
     public String toString() {
         return "AppVersionBean{" +
@@ -38,6 +42,7 @@ public class AppVersionBean implements Serializable{
                 ", versionCode=" + versionCode +
                 ", versionName='" + versionName + '\'' +
                 ", appIntroduce='" + appIntroduce + '\'' +
+                ", appKBsize=" + appKBsize +
                 '}';
     }
 }

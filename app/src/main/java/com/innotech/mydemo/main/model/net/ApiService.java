@@ -1,4 +1,4 @@
-package com.innotech.mydemo.model.net;
+package com.innotech.mydemo.main.model.net;
 
 import com.innotech.mydemo.bean.AdBean;
 import com.innotech.mydemo.bean.ResVersionBean;

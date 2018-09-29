@@ -8,7 +8,7 @@
 
          <variable
              name="mainmenuVM"
-             type="com.innotech.mydemo.viewmodel.MainMenuVM"/>
+             type="com.innotech.mydemo.main.viewmodel.MainMenuVM"/>
     </data>
 
     <LinearLayout

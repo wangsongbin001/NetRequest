@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!-- Æô¶¯Ò³ theme. windowBackgroundÉèÖÃÎªÆô¶¯Ò³±³¾°Í¼ÊµÏÖÎÞ·ì´ò¿ªÆô¶¯Ò³ -->
+    <!-- å¯åŠ¨é¡µ theme. windowBackgroundè®¾ç½®ä¸ºå¯åŠ¨é¡µèƒŒæ™¯å›¾å®žçŽ°æ— ç¼æ‰“å¼€å¯åŠ¨é¡µ -->
     <style name="launchTheme" parent="AppTheme">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
@@ -31,18 +31,18 @@
         <item name="android:textSize">16sp</item>
     </style>
 
-    <!--´óÐÍ°×É«°´Å¥,171*40-->
+    <!--å¤§åž‹ç™½è‰²æŒ‰é’®,171*40-->
     <style name="button_171_40_white" parent="button_171_40_red">
         <item name="android:background">@drawable/selector_button_corner4_white</item>
         <item name="android:textColor">@drawable/selector_button_text_red_gray</item>
     </style>
 
-    <!--ÖÐÐÍ°×É«°´Å¥,120*40-->
+    <!--ä¸­åž‹ç™½è‰²æŒ‰é’®,120*40-->
     <style name="button_120_40_white" parent="button_171_40_white">
         <item name="android:layout_width">120dp</item>
     </style>
 
-    <!--ÖÐÐÍºìÉ«°´Å¥,120*40-->
+    <!--ä¸­åž‹çº¢è‰²æŒ‰é’®,120*40-->
     <style name="button_120_40_red" parent="button_171_40_red">
         <item name="android:layout_width">120dp</item>
     </style>

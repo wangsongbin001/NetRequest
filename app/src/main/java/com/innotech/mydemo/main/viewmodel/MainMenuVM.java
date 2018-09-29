@@ -1,6 +1,4 @@
-package com.innotech.mydemo.viewmodel;
-
-import android.databinding.ObservableField;
+package com.innotech.mydemo.main.viewmodel;
 
 import com.innotech.mydemo.bean.BottomMenuBean;
 import com.innotech.netrequest.BaseAppCompatActivity;

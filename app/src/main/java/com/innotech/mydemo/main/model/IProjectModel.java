@@ -1,6 +1,5 @@
-package com.innotech.mydemo.model;
+package com.innotech.mydemo.main.model;
 
-import com.innotech.netrequest.BaseAppCompatActivity;
 import com.innotech.netrequest.BaseFragmentV4;
 
 /**
