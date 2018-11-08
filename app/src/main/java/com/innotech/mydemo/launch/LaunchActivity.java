@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -25,12 +24,10 @@ import com.innotech.mydemo.utils.CommonUtil;
 import com.innotech.mydemo.utils.DialogUtil;
 import com.innotech.netrequest.BaseAppCompatActivity;
 import com.innotech.netrequest.net.BaseErrorConsumer;
-import com.innotech.netrequest.util.Utils;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import io.reactivex.functions.Consumer;
 
 /**
