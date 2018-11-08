@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="288dp"
+    android:layout_height="156dp"
+    android:background="@drawable/corner_white_bg_6">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:layout_width="238dp"
+        android:layout_height="22dp"
+        android:text="确定不想再看到赚钱秘籍了？"
+        android:gravity="center"
+        android:textColor="#ff818c88"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="113dp"
+        android:layout_height="42dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="21dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#ffb1beb9"
+        android:textSize="16sp"
+        android:background="@drawable/corner_gray_bg_stoken"/>
+
+    <TextView
+        android:id="@+id/tv_ensure"
+        android:layout_width="113dp"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="21dp"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:background="@mipmap/bg_guide_forbid"/>
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="展示"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐藏"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_release"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="销毁"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_init"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="初始化"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_showdialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="展示弹窗"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_vis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示可见"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐藏不可见"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_update_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更新dialog列表"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_forbid_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示forbiddialog"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_intercept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拦截弹窗"
+        android:onClick="onClick"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

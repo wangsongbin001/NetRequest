@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="288dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登陆太麻烦？试试:"/>
+
+    <ImageView
+        android:id="@+id/iv_agree"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bg_guide_forbid"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_refuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="不了退出登陆"/>
+
+</LinearLayout>

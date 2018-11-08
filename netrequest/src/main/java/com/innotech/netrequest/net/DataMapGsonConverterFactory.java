@@ -64,13 +64,13 @@ public class DataMapGsonConverterFactory extends Converter.Factory {
         public T convert(ResponseBody value) throws IOException {
             try {
                 String json = value.string();
-                LogUtil.d("MNetRequest", "value:" + json);
+                LogUtil.i("MNetRequest", "value:" + json);
                 JSONObject jsonObject = new JSONObject(json);
                 String status = null;
                 String code = null;
                 try{ status = jsonObject.getString("status");}catch (Exception e){}
                 try{ code = jsonObject.getString("code");}catch (Exception e){}
-                LogUtil.d("MNetRequest", "status:" + status + ",code:" + code);
+                LogUtil.i("MNetRequest", "status:" + status + ",code:" + code);
                 if ("000".equals(status) || EnumResCode.REQUEST_SUCCESS.equals(code)) {
                     if (withData) {
                         json = jsonObject.get("data").toString();

@@ -6,13 +6,12 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
 import com.innotech.mydemo.R;
-import com.innotech.mydemo.adapter.MyPagerAdapter;
+import com.innotech.mydemo.main.adapter.MyPagerAdapter;
 import com.innotech.mydemo.bean.BottomMenuBean;
 import com.innotech.mydemo.databinding.ActivityMainMenuBinding;
-import com.innotech.mydemo.fragment.MyFragment;
-import com.innotech.mydemo.fragment.ProjectFragment;
-import com.innotech.mydemo.viewmodel.MainMenuVM;
-import com.innotech.netrequest.BaseActivity;
+import com.innotech.mydemo.main.fragment.MyFragment;
+import com.innotech.mydemo.main.fragment.ProjectFragment;
+import com.innotech.mydemo.main.viewmodel.MainMenuVM;
 import com.innotech.netrequest.BaseAppCompatActivity;
 
 import java.util.ArrayList;

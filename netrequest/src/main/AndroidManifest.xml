@@ -1,17 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.innotech.netrequest" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application>
         <activity android:name=".crash.CrashActivity"/>
         <service android:name=".crash.CrashInfoUploadService"/>
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.innotech.mydemo.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/filepaths"/>
 
-        </provider>
     </application>
 </manifest>

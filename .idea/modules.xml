@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NetRequest-netrequest.iml" filepath="$PROJECT_DIR$/NetRequest-netrequest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NetRequest.iml" filepath="$PROJECT_DIR$/NetRequest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/netrequest/netrequest-netrequest.iml" filepath="$PROJECT_DIR$/netrequest/netrequest-netrequest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netrequest/netrequest.iml" filepath="$PROJECT_DIR$/netrequest/netrequest.iml" />
     </modules>
   </component>
 </project>
