@@ -1,4 +1,4 @@
-package com.innotech.mydemo.main.model.net;
+package com.innotech.mydemo.net;
 
 import com.innotech.mydemo.bean.TokenBean;
 import com.innotech.netrequest.entities.ResponseBean;

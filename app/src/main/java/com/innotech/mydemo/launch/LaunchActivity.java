@@ -14,11 +14,12 @@ import android.widget.Toast;
 import com.innotech.mydemo.R;
 import com.innotech.mydemo.launch.bean.AdBean;
 import com.innotech.mydemo.launch.bean.DownloadBean;
-import com.innotech.mydemo.launch.pressenter.ILanchPressenter;
-import com.innotech.mydemo.launch.pressenter.imp.LaunchPressenterImp;
+import com.innotech.mydemo.launch.presenter.ILanchPresenter;
+import com.innotech.mydemo.launch.presenter.imp.LaunchPresenterImp;
 import com.innotech.mydemo.launch.util.AdsController;
 import com.innotech.mydemo.launch.util.DownloadProgressDialogController;
 import com.innotech.mydemo.launch.util.DownloadUtil;
+import com.innotech.mydemo.main.MainActivity;
 import com.innotech.mydemo.main.MainFragmentActivity;
 import com.innotech.mydemo.utils.CommonUtil;
 import com.innotech.mydemo.utils.DialogUtil;
@@ -46,7 +47,7 @@ public class LaunchActivity extends BaseAppCompatActivity {
     @Bind(R.id.btn_request)
     Button btnRequest;
     //业务层控制
-    ILanchPressenter mILanchPressenter;
+    ILanchPresenter mILanchPressenter;
     //版本更新封装
     DownloadProgressDialogController downloadProgressDialogManager;
     //广告封装
@@ -64,7 +65,7 @@ public class LaunchActivity extends BaseAppCompatActivity {
         setContentView(R.layout.activity_launch);
         ButterKnife.bind(this);
         initViews();
-        mILanchPressenter = new LaunchPressenterImp(this);
+        mILanchPressenter = new LaunchPresenterImp(this);
         downloadProgressDialogManager = new DownloadProgressDialogController(this);
         mAdsController = new AdsController(this);
         checkPermission();
@@ -199,7 +200,7 @@ public class LaunchActivity extends BaseAppCompatActivity {
     }
 
     public void finishCurrent() {
-        Intent intent = new Intent(this, MainFragmentActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }

@@ -83,8 +83,23 @@
         android:text="拦截弹窗"
         android:onClick="onClick"/>
 
+    <Button
+        android:id="@+id/btn_he"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="合并账号的弹窗"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btn_failure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="失败弹窗"
+        android:onClick="onClick"/>
+
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
 </LinearLayout>

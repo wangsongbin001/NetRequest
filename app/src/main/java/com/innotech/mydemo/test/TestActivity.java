@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.innotech.mydemo.R;
 import com.innotech.mydemo.utils.LogUtils;
+import com.innotech.mydemo.widget.FailureDialog;
 import com.innotech.mydemo.widget.ForbidMoneyBookEnsureDialog;
 import com.innotech.mydemo.widget.GuideDialog;
 import com.innotech.mydemo.widget.IGuideBook;
@@ -33,7 +34,6 @@ public class TestActivity extends Activity {
     }
 
     private void initViews(){
-
     }
 
     public void onClick(View view) {
@@ -91,9 +91,25 @@ public class TestActivity extends Activity {
             case R.id.btn_intercept:
                 showInterceptDialog();
                 break;
+            case R.id.btn_he:
+                showHeDialog();
+                break;
+            case R.id.btn_failure:
+                showFailureDialog();
+                break;
             default:
                 break;
         }
+    }
+
+    private void showFailureDialog(){
+        FailureDialog failureDialog = new FailureDialog(this);
+        failureDialog.show();
+    }
+
+    private void showHeDialog(){
+        UnifiedAccountDialog unifiedAccountDialog = new UnifiedAccountDialog(this);
+        unifiedAccountDialog.show();
     }
 
     @Override

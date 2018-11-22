@@ -94,7 +94,11 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     //权限申请
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
-
+    //刷新Layout组件。
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    //ListView. RecyclerView Adapter的封装
+//    compile 'com.zhy:base-rvadapter:3.0.3'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
 }

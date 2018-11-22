@@ -3,7 +3,7 @@ package com.innotech.mydemo.main.model.imp;
 import com.innotech.mydemo.bean.TokenBean;
 import com.innotech.mydemo.bean.UserBean;
 import com.innotech.mydemo.main.model.IUserModel;
-import com.innotech.mydemo.main.model.net.CuriserWrapper;
+import com.innotech.mydemo.net.CuriserWrapper;
 import com.innotech.mydemo.main.viewmodel.UserVM;
 import com.innotech.netrequest.BaseActivity;
 import com.innotech.netrequest.net.BaseErrorConsumer;

@@ -1,15 +1,13 @@
-package com.innotech.mydemo.launch.pressenter.imp;
-
-import android.widget.Toast;
+package com.innotech.mydemo.launch.presenter.imp;
 
 import com.innotech.mydemo.launch.LaunchActivity;
 import com.innotech.mydemo.launch.bean.AdBean;
 import com.innotech.mydemo.launch.bean.AppVersionBean;
 import com.innotech.mydemo.launch.bean.DownloadBean;
 import com.innotech.mydemo.launch.bean.IndexBean;
-import com.innotech.mydemo.launch.pressenter.ILanchPressenter;
+import com.innotech.mydemo.launch.presenter.ILanchPresenter;
 import com.innotech.mydemo.launch.util.DownloadUtil;
-import com.innotech.mydemo.main.model.net.LocalWrapper;
+import com.innotech.mydemo.net.LocalWrapper;
 import com.innotech.mydemo.utils.CommonUtil;
 import com.innotech.mydemo.utils.ToastUtil;
 import com.innotech.netrequest.net.BaseErrorConsumer;
@@ -20,11 +18,11 @@ import java.io.File;
 
 import io.reactivex.functions.Consumer;
 
-public class LaunchPressenterImp implements ILanchPressenter {
+public class LaunchPresenterImp implements ILanchPresenter {
 
     LaunchActivity launchActivity;
     private IndexBean mIndexBean;
-    public  LaunchPressenterImp(LaunchActivity launchActivity){
+    public LaunchPresenterImp(LaunchActivity launchActivity){
         this.launchActivity = launchActivity;
     }
 
