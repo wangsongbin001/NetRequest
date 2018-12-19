@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 
+import com.innotech.mydemo.utils.LogUtils;
+import com.innotech.netrequest.util.LogUtil;
+
 /**
  * Activity + 多Fragment的框架，对于在使用Fragment中遇到的坑，
  * 总结归纳，并将解决方法进行封装
@@ -32,5 +35,20 @@ public class V2BaseFragment extends Fragment{
         this.mActivity = (Activity) context;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        LogUtils.i("wang", "onResume");
+    }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        LogUtils.i("wang", "onHiddenChanged-hidden:" + hidden);
+    }
+
+    public void onVisiableChanged(boolean show){
+
+    }
 
 }

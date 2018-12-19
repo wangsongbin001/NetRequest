@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="342dp"
+    android:layout_height="164dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/corner_white_bg">
+
+    <HorizontalScrollView
+        android:id="@+id/h_scrollview"
+        android:layout_marginTop="24dp"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fl_login_way_wechat"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/icon_dialog_wechat"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="社交账号登录"
+                    android:textColor="#D1D4D6"
+                    android:textSize="12sp"
+                    android:layout_gravity="bottom|center_horizontal"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_login_way_sms"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/icon_dialog_sms"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="短信登录"
+                    android:textColor="#D1D4D6"
+                    android:textSize="12sp"
+                    android:layout_gravity="bottom|center_horizontal"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_login_way_account"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/icon_dialog_account"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="密码登录"
+                    android:textColor="#D1D4D6"
+                    android:textSize="12sp"
+                    android:layout_gravity="bottom|center_horizontal"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_login_way_hw"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/icon_dialog_huawei"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="华为登录"
+                    android:textColor="#D1D4D6"
+                    android:textSize="12sp"
+                    android:layout_gravity="bottom|center_horizontal"/>
+            </FrameLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tv_dialog_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="取消"
+        android:textSize="16sp"
+        android:textColor="#6E7774"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"/>
+
+</FrameLayout>

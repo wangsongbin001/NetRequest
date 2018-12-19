@@ -1,22 +1,26 @@
 package com.innotech.mydemo.test;
 
 import android.app.Activity;
-import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.innotech.mydemo.R;
+import com.innotech.mydemo.launch.DownloadProgressDialogManager;
+import com.innotech.mydemo.login.bind.BindWechatActivity;
 import com.innotech.mydemo.utils.LogUtils;
+import com.innotech.mydemo.utils.ToastUtil;
 import com.innotech.mydemo.widget.FailureDialog;
 import com.innotech.mydemo.widget.ForbidMoneyBookEnsureDialog;
 import com.innotech.mydemo.widget.GuideDialog;
 import com.innotech.mydemo.widget.IGuideBook;
 import com.innotech.mydemo.widget.InterceptDialog;
+import com.innotech.mydemo.widget.MoreLoginWayDialog;
 import com.innotech.mydemo.widget.imp.FloatTouchCallBack;
 
 import java.util.ArrayList;
@@ -24,13 +28,12 @@ import java.util.List;
 
 public class TestActivity extends Activity {
 
-    ViewPager vp;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        vp = findViewById(R.id.vp_content);
-        initViews();
+
+        ProgressDialog progressDialog = new ProgressDialog(this);
     }
 
     private void initViews(){
@@ -97,9 +100,34 @@ public class TestActivity extends Activity {
             case R.id.btn_failure:
                 showFailureDialog();
                 break;
+            case R.id.btn_more_way:
+                showMoreWayDialog();
+                break;
+            case R.id.btn_bindwx:
+                startActivity(new Intent(this, BindWechatActivity.class));
+                break;
             default:
                 break;
         }
+    }
+
+    MoreLoginWayDialog moreLoginWayDialog = null;
+    public void showMoreWayDialog(){
+        if(null == moreLoginWayDialog) {
+            moreLoginWayDialog = new MoreLoginWayDialog(this,
+                    new MoreLoginWayDialog.LoginWaySelectCallBack() {
+                        @Override
+                        public void slected(int way) {
+                            ToastUtil.showToastS(TestActivity.this, "" + way);
+                        }
+
+                        @Override
+                        public void cancel() {
+                            ToastUtil.showToastS(TestActivity.this, "cancel");
+                        }
+                    });
+        }
+        moreLoginWayDialog.show();
     }
 
     private void showFailureDialog(){

@@ -1,17 +1,16 @@
-package com.innotech.mydemo.login;
+package com.innotech.mydemo.login.bind;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.innotech.netrequest.BaseActivity;
+import com.innotech.mydemo.R;
 
-/**
- * 登录模块的封装
- */
-public class LoginActivity extends BaseActivity{
+public class BindWechatActivity extends Activity{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_bindwechat);
     }
 }

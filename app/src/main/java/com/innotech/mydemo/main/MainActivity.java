@@ -13,6 +13,7 @@ import com.innotech.mydemo.R;
 import com.innotech.mydemo.main.base.V2BaseActivity;
 import com.innotech.mydemo.main.fragment.V2NewsFragment;
 import com.innotech.mydemo.main.fragment.V2PersonFragment;
+import com.innotech.mydemo.main.fragment.V2TaskFragment;
 import com.innotech.mydemo.main.model.MainMenuItem;
 import com.innotech.mydemo.main.presenter.IMainPresenter;
 import com.innotech.mydemo.main.presenter.imp.MainPresenterImp;
@@ -88,7 +89,7 @@ public class MainActivity extends V2BaseActivity implements View.OnClickListener
                 item.setFragment(new V2NewsFragment());
                 mapTabs.put(item.type, item);
             } else if (MainMenuItem.TYPE_TASK == item.type) {
-                item.setFragment(new V2PersonFragment());
+                item.setFragment(new V2TaskFragment());
                 mapTabs.put(item.type, item);
             } else if (MainMenuItem.TYPE_PERSON == item.type) {
                 item.setFragment(new V2PersonFragment());

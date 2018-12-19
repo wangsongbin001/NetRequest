@@ -97,6 +97,20 @@
         android:text="失败弹窗"
         android:onClick="onClick"/>
 
+    <Button
+        android:id="@+id/btn_more_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录方式弹窗"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btn_bindwx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="绑定微信"
+        android:onClick="onClick"/>
+
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_content"
         android:layout_width="match_parent"

@@ -45,7 +45,7 @@ public class MApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        MCrashHandler.getInstance().init(this);
+//        MCrashHandler.getInstance().init(this);
         initRefreshLayoutStyle();
         instance = this;
     }
