@@ -11,7 +11,7 @@ public class LocalWrapper {
 
     public static LocalService getService(Context context){
         if(localService == null){
-            localService = RetrofitUtils.getRetrofit(context, URLConfig.BASE_URL_LOCAL, null).create(LocalService.class);
+            localService = RetrofitUtils.getRetrofit(context, URLConfig.BASE_URL_ONLINE, null).create(LocalService.class);
         }
         return localService;
     }

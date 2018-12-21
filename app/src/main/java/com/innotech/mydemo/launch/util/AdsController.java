@@ -32,6 +32,8 @@ public class AdsController implements View.OnClickListener{
     private void initViews(Activity activity){
         imgAds = activity.findViewById(R.id.img_ad);
         tvTips = activity.findViewById(R.id.tv_tips);
+        imgAds.setVisibility(View.GONE);
+        tvTips.setVisibility(View.GONE);
         tvTips.setOnClickListener(this);
         imgAds.setOnClickListener(this);
     }

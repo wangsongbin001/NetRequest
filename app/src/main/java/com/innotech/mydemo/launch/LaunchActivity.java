@@ -20,7 +20,6 @@ import com.innotech.mydemo.launch.util.AdsController;
 import com.innotech.mydemo.launch.util.DownloadProgressDialogController;
 import com.innotech.mydemo.launch.util.DownloadUtil;
 import com.innotech.mydemo.main.MainActivity;
-import com.innotech.mydemo.main.MainFragmentActivity;
 import com.innotech.mydemo.utils.CommonUtil;
 import com.innotech.mydemo.utils.DialogUtil;
 import com.innotech.netrequest.BaseAppCompatActivity;

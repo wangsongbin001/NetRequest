@@ -15,7 +15,10 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         // 声明需要使用注解功能
-        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        javaCompileOptions { annotationProcessorOptions {
+            includeCompileClasspath = true
+            arguments = [moduleName: project.getName()]
+        } }
         //申明BuildConfigFiled
         def filesAuthorityValue = applicationId + ".files"
         manifestPlaceholders = [filesAuthority: filesAuthorityValue]
@@ -84,10 +87,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    //    compile(name:'netrequest',ext:'aar')
-    implementation project(':netrequest')
-//    implementation 'io.reactivex.rxjava2:rxjava:2.1.10'
-//    implementation 'com.google.code.gson:gson:2.8.0'
+    //    implementation 'io.reactivex.rxjava2:rxjava:2.1.10'
+    //    implementation 'com.google.code.gson:gson:2.8.0'
     compileOnly 'org.projectlombok:lombok:1.12.6'
     implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
     //butterknife
@@ -97,8 +98,15 @@ dependencies {
     //刷新Layout组件。
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
     //ListView. RecyclerView Adapter的封装
-//    compile 'com.zhy:base-rvadapter:3.0.3'
+    //    compile 'com.zhy:base-rvadapter:3.0.3'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'com.android.support:support-v4:26.1.0'
     implementation 'com.android.support:design:26.1.0'
+    //ARouter框架依赖
+    implementation rootProject.ext.dependencies["arouter-api"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+    //    compile(name:'netrequest',ext:'aar')
+    implementation project(':netrequest')
+    implementation project(':mine')
+    implementation project(':home')
 }

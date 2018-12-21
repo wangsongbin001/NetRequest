@@ -1,1 +1,1 @@
-include ':app', ':netrequest'
+include ':app', ':netrequest', ':mine', ':home'

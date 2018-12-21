@@ -6,10 +6,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.innotech.mydemo.R;
 import com.innotech.mydemo.launch.DownloadProgressDialogManager;
 import com.innotech.mydemo.login.bind.BindWechatActivity;
@@ -22,6 +25,7 @@ import com.innotech.mydemo.widget.IGuideBook;
 import com.innotech.mydemo.widget.InterceptDialog;
 import com.innotech.mydemo.widget.MoreLoginWayDialog;
 import com.innotech.mydemo.widget.imp.FloatTouchCallBack;
+import com.innotech.netrequest.RouterPageIndex;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +38,8 @@ public class TestActivity extends Activity {
         setContentView(R.layout.activity_test);
 
         ProgressDialog progressDialog = new ProgressDialog(this);
+
+
     }
 
     private void initViews(){
@@ -105,6 +111,13 @@ public class TestActivity extends Activity {
                 break;
             case R.id.btn_bindwx:
                 startActivity(new Intent(this, BindWechatActivity.class));
+                break;
+            case R.id.btn_router:
+                // 2. 跳转并携带参数
+                ARouter.getInstance().build(RouterPageIndex.PAGE_HOME)
+                        .withLong("key1", 666L)
+                        .withString("key3", "888")
+                        .navigation();
                 break;
             default:
                 break;
@@ -190,5 +203,30 @@ public class TestActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         IGuideBook.releaseBookGuide();
+    }
+
+    static class MyAdapter extends RecyclerView.Adapter{
+        @Override
+        public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            return null;
+        }
+
+        @Override
+        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
+        }
+
+        @Override
+        public int getItemCount() {
+            notifyDataSetChanged();
+            return 0;
+        }
+
+        class MyHolder extends RecyclerView.ViewHolder{
+
+            public MyHolder(View itemView) {
+                super(itemView);
+            }
+        }
     }
 }
